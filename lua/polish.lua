@@ -2,6 +2,8 @@
 -- This is just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "tasks.md",
   callback = function(ev)
