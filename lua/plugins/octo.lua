@@ -11,6 +11,7 @@ return {
     opts = {
       picker = "snacks",
       enable_builtin = true,
+      use_local_fs = true,
       gh_env = function()
         return {
           CODER = vim.env.CODER,
