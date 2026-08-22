@@ -7,9 +7,12 @@ return {
         "<Leader>fL",
         function()
           require("snacks").picker.files {
+            -- Unlike fd, rg supports mixing directories and exact file paths.
+            cmd = "rg",
             dirs = {
               "./export_worker/src/main/rust/lightspeed",
               "./web/src/ui/rendering/lightspeed",
+              "./analytics_event_client/src/main/proto/events/editor/editing/lightspeed.analytics.proto",
             },
             desc = "Lightspeed Files",
           }
