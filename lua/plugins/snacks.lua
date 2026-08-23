@@ -12,7 +12,7 @@ return {
     "folke/snacks.nvim",
     keys = {
       {
-        "<Leader>fL",
+        "<Leader>fF",
         function()
           require("snacks").picker.files {
             -- Unlike fd, rg supports mixing directories and exact file paths.
