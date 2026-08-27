@@ -2,6 +2,7 @@ local function lightspeed_paths()
   return {
     "./export_worker/src/main/rust/lightspeed",
     "./web/src/ui/rendering/lightspeed",
+    "./web/harness/editor/editing/lightspeed",
     "./analytics_event_client/src/main/proto/events/editor/editing/lightspeed.analytics.proto",
   }
 end
