@@ -4,6 +4,12 @@
 
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 
+vim.keymap.set("n", "<leader>yp", function()
+  local path = vim.fn.expand "%:p"
+  vim.fn.setreg("+", path)
+  vim.notify("Copied file path: " .. path)
+end, { desc = "Yank current file path" })
+
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "tasks.md",
   callback = function(ev)
